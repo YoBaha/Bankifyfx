@@ -1,0 +1,82 @@
+/* styles.css */
+.custom-button {
+    -fx-background-color: #FFA500;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-min-width: 80px;
+}
+/* CRUD button */
+.crud-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-min-width: 80px;
+}
+
+.goFront-button {
+    -fx-background-color: #1E90FF;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-min-width: 80px;
+}
+
+.custom-table-view {
+    -fx-background-color: #FFB6C1;
+}
+
+.custom-table-view .column-header-background {
+    -fx-background-color: #FFB6C1;
+    -fx-text-fill: blue;
+}
+
+.custom-table-view .table-row-cell {
+    -fx-background-color: #FFD9E6;
+}
+
+.PDF-button {
+    -fx-background-color: #E12929;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-min-width: 80px;
+}
+
+/* Style the pie chart */
+.chart {
+    -fx-background-color: #f0f0f0; /* Set background color */
+}
+
+/* Style the pie chart data labels */
+.chart-pie-label {
+    -fx-font-size: 12px; /* Set font size for labels */
+    -fx-fill: #333333; /* Set text color */
+}
+
+/* Style the pie chart data colors */
+.chart-pie {
+    /* Define colors for different sections */
+    -fx-pie-color-1: #ff0000;
+    -fx-pie-color-2: #00ff00;
+    -fx-pie-color-3: #0000ff;
+    /* Add more colors as needed */
+}
+
+
+.excel-button {
+    -fx-background-color: #33C481; /* Set the background color */
+}
