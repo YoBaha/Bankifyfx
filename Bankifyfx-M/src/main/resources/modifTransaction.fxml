@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #cf87c4;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.modifTransaction">
+    
+    <children>
+        <VBox alignment="CENTER" layoutX="50" layoutY="30" prefWidth="300" spacing="15">
+            <children>
+
+                <!-- Label indiquant l'ID de la transaction à modifier -->
+                <Label fx:id="transactionLabel" text="Modification de la transaction ID: " />
+
+                <!-- Champs de texte pour la modification des détails de la transaction -->
+                <HBox spacing="10">
+                    <Label text="Montant:" />
+                    <TextField fx:id="montantField" />
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Date:" />
+                    <TextField fx:id="dateField">
+                  <HBox.margin>
+                     <Insets left="20.0" />
+                  </HBox.margin></TextField>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Type:" />
+                    <TextField fx:id="typeField">
+                  <HBox.margin>
+                     <Insets left="20.0" />
+                  </HBox.margin></TextField>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Statut:" />
+                    <TextField fx:id="statutField">
+                  <HBox.margin>
+                     <Insets left="14.0" />
+                  </HBox.margin></TextField>
+                </HBox>
+
+                <!-- Bouton de modification -->
+                <Button fx:id="modifierButton" onAction="#modifierTransaction" style="-fx-background-color: #fbe6de;" text="Modifier" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

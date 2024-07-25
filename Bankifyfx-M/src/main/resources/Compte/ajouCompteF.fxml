@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Compte.AjoutCompte">
+    <children>
+        <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@front.jpeg" />
+            </image>
+        </ImageView>
+        <!-- Ajout du titre "Ajouter le compte du client" en blanc, plus grand et centré -->
+        <Label layoutX="0" layoutY="20.0" prefWidth="600.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #ffffff; -fx-alignment: center;" text="Ajouter un CompteClient" />
+        <!-- Fin de l'ajout du titre -->
+        <Label layoutX="47.0" layoutY="55.0" text="Nom:" />
+        <Label layoutX="41.0" layoutY="102.0" text="Prénom:" />
+        <Label layoutX="52.0" layoutY="146.0" text="RIB:" />
+        <Label layoutX="49.0" layoutY="190.0" text="mail:" />
+        <Label layoutX="44.0" layoutY="240.0" text="Téléphone:" />
+        <Label layoutX="46.0" layoutY="284.0" text="Solde:" />
+        <Label layoutX="45.0" layoutY="330.0" text="Genre:" />
+        <TextField fx:id="nomTF" layoutX="150.0" layoutY="51.0" />
+        <TextField fx:id="prenomTF" layoutX="150.0" layoutY="98.0" />
+        <TextField fx:id="ribTF" layoutX="150.0" layoutY="142.0" />
+        <TextField fx:id="mailTF" layoutX="150.0" layoutY="186.0" />
+        <TextField fx:id="telTF" layoutX="150.0" layoutY="236.0" />
+        <TextField fx:id="soldeTF" layoutX="150.0" layoutY="280.0" />
+        <!-- Combo box for gender selection -->
+        <ComboBox fx:id="genderComboBox" layoutX="150.0" layoutY="324.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Male" />
+                    <String fx:value="Female" />
+                    <String fx:value="Other" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button layoutX="340.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleConfirmButton" text="Confirm" />
+    </children>
+</AnchorPane>

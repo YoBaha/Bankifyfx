@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane  prefHeight="723.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.addTransaction">
+
+    <children>
+        <!-- Background image -->
+        <ImageView fx:id="tf_image" fitHeight="732.0" fitWidth="1084.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@pink.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- MenuBar with transparent background and purple text -->
+        <MenuBar layoutX="0.0" layoutY="0.0" prefHeight="30.0" prefWidth="1083.0" style="-fx-background-color: transparent;">
+            <menus>
+                <!-- Menu: Compte -->
+                <Menu style="-fx-text-fill: purple;" text="Compte">
+                    <items>
+                        <MenuItem onAction="#handleClicksFF1"  style="-fx-text-fill: purple;" text="Ouvrir Compte" />
+                        <MenuItem onAction="#handleClicksFF"  style="-fx-text-fill: purple;" text="Ouvrir Virement" />
+
+
+                    </items>
+                </Menu>
+
+                <!-- Menu: Transaction -->
+                <Menu style="-fx-text-fill: purple;" text="Transaction">
+                    <items>
+                        <MenuItem onAction="#openAjouterTransactionWindow" style="-fx-text-fill: purple;" text="Ajouter Transaction" />
+                        <MenuItem onAction="#openAfficherTransactionsWindow" style="-fx-text-fill: purple;" text="Afficher Transactions" />
+                    </items>
+                </Menu>
+
+                <!-- Menu: Crédit -->
+                <Menu style="-fx-text-fill: purple;" text="Crédit">
+                    <items>
+                        <MenuItem onAction="#demanderCredit" onMenuValidation="#consulterCredit" style="-fx-text-fill: purple;" text="Demander Crédit" />
+                        <MenuItem onAction="#consulterCredit" style="-fx-text-fill: purple;" text="Consulter Crédit" />
+                    </items>
+                </Menu>
+
+
+
+                <!-- Menu: Assurances -->
+                <Menu style="-fx-text-fill: purple;" text="Assurances">
+                    <items>
+                        <MenuItem onAction="#goToFrontAssuranceeButtonClicked"  style="-fx-text-fill: purple;" text="ConsulterAssurance" />
+
+                    </items>
+                </Menu>
+            </menus>
+            <Menu text="Profile">
+                <items>
+                    <MenuItem text="Edit Profile" onAction="#goToProfileButtonClicked" />
+                </items>
+            </Menu>
+        </MenuBar>
+      <Pane fx:id="pnItems" layoutX="24.0" layoutY="38.0" prefHeight="682.0" prefWidth="1054.0">
+         <children>
+              <Label text="Montant" />
+      
+                                            <!-- Text fields and labels -->
+              <TextField fx:id="montantTF" layoutY="17.0" prefHeight="25.0" prefWidth="306.0" />
+              <Label layoutY="49.0" text="Date Transaction" />
+      
+                                                        <TextField fx:id="dateTF" layoutY="66.0" prefHeight="25.0" prefWidth="306.0" />
+              <Label layoutY="100.0" text="Type" />
+      
+                                      <TextField fx:id="typeTF" layoutY="117.0" prefHeight="25.0" prefWidth="306.0" />
+              <Label layoutY="150.0" text="Statut" />
+      
+                                      <TextField fx:id="statutTF" layoutY="167.0" prefHeight="25.0" prefWidth="306.0" />
+      
+                                      <!-- ComboBox for selecting Carte -->
+              <ComboBox fx:id="carteComboBox" layoutX="-5.0" layoutY="228.0" prefHeight="30.0" prefWidth="150.0" promptText="Select Carte" style="               -fx-background-color: white; /* Light gray background */               -fx-border-color: #8a2be2; /* Purple border color */               -fx-border-radius: 3; /* Rounded border corners */               -fx-font-size: 10pt; /* Smaller font size */               -fx-text-fill: black; /* Text color */               -fx-padding: 3px; /* Smaller padding */               -fx-prompt-text-fill: #8a2be2; /* Purple color for prompt text */               -fx-focus-color: #8a2be2; /* Focus color */               -fx-background-insets: 0, 1; /* Control the background insets */               -fx-border-insets: 0; /* Control the border insets */               -fx-background-radius: 3; /* Rounded background corners */           " />
+      
+                              
+                          <!-- Button: Ajouter -->
+              <Button layoutX="107.0" layoutY="274.0" mnemonicParsing="false" onAction="#addTransaction" style="-fx-background-color: #FFC0CB; -fx-text-fill: black; -fx-border-color: #FFC0CB; -fx-border-radius: 5; -fx-background-radius: 5; -fx-font-weight: bold; -fx-padding: 8px 16px;" text="Ajouter" />
+         </children>
+      </Pane>
+        <Button fx:id="signoutBtn" layoutX="977.0" layoutY="661.0" mnemonicParsing="false" onAction="#signout" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: red;" styleClass="modern-button" text="Sign Out" />
+
+    </children>
+</AnchorPane>

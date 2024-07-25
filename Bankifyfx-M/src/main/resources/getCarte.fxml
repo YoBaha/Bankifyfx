@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="830.0" prefWidth="1324.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.getCarte">
+    <effect>
+        <DropShadow color="#1b1eeb" />
+    </effect>
+    <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+            <VBox.margin>
+                <Insets bottom="10.0" top="50.0" />
+            </VBox.margin>
+            <Image url="@images/admin.jpg" />
+        </ImageView>
+        <Label text="Admin" textFill="#e7e5e5">
+            <VBox.margin>
+                <Insets bottom="20.0" />
+            </VBox.margin>
+        </Label>
+        <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#loadMacarte" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Carte" textFill="#e7e5e5">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Home_32px.png" />
+                </ImageView>
+            </graphic>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnOrders" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicksFF" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Comptes">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Open_Envelope_32px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnOrders1" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicksFF1" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Virement">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Open_Envelope_32px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Utilisateurs">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Person_32px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnMenus" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#fillCheques" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Cheques">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Xbox_Menu_32px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnPackages" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToBack" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Credits">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Box_32px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnSettings" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToCategorie" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Categories de credit">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Slider__32px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnSettings1" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#gotoassuranceback" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Assurances">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Slider__32px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+        <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Signout" prefHeight="42.0" prefWidth="259.0" stylesheets="@css/style.css" text="Sign Out">
+            <graphic>
+                <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@images/icons8_Sign_Out_32px.png" />
+                </ImageView>
+            </graphic>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </Button>
+    </VBox>
+    <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+    <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" />
+    <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" />
+    <Pane fx:id="pnlMenus" prefHeight="200.0" prefWidth="200.0" />
+    <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
+    <TextField layoutX="590.0" layoutY="47.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: #02030A; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+    <Label layoutX="57.0" layoutY="25.0" text="Bankify" textFill="#e7e5e5">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+    <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <Label text="22000" textFill="#2a73ff">
+                <font>
+                    <Font name="System Bold" size="26.0" />
+                </font>
+            </Label>
+            <Label text="Total Users" textFill="#e7e5e5" />
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <Label text="1500" textFill="#26bfbc">
+                <font>
+                    <Font name="System Bold" size="26.0" />
+                </font>
+            </Label>
+            <Label text="Total Connected" textFill="#e7e5e5" />
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <Label text="1000" textFill="#fa5f7e">
+                <font>
+                    <Font name="System Bold" size="26.0" />
+                </font>
+            </Label>
+            <Label text="Total Employees" textFill="#e7e5e5" />
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <Label text="780" textFill="#de0000">
+                <font>
+                    <Font name="System Bold" size="26.0" />
+                </font>
+            </Label>
+            <Label text="Total Reviews" textFill="#e7e5e5" />
+        </VBox>
+
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="178.0" prefHeight="42.0" prefWidth="712.0" spacing="80.0" style="-fx-background-color: #02030A;">
+        <Label textFill="#e7e5e5">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+        <Label textFill="#e7e5e5">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+        <Label textFill="#e7e5e5">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="tfrecherche" onAction="#recherche_avance" prefWidth="200" promptText="Search..." />
+        <ComboBox fx:id="cbtri" layoutX="100" layoutY="50" onAction="#tri" prefHeight="25" prefWidth="150" />
+    </HBox>
+
+
+    <ScrollPane layoutX="14.0" layoutY="232.0" prefHeight="595.0" prefWidth="1048.0" stylesheets="@css/style.css">
+    <VBox fx:id="pnItems" prefHeight="1063.0" prefWidth="1036.0" spacing="5.0" style="-fx-background-color: #02030A;">
+        <TableView fx:id="carteTable" layoutX="167.0" layoutY="99.0" prefHeight="217.0" prefWidth="669.0" style="-fx-background-color: black;">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="57.0" text="ID" />
+                <TableColumn fx:id="numColumn" prefWidth="106.0" text="Numéro" />
+                <TableColumn fx:id="dateExpColumn" prefWidth="146.0" text="Date d'expiration" />
+                <TableColumn fx:id="typeColumn" prefWidth="102.0" text="Type" />
+                <TableColumn fx:id="statutColumn" prefWidth="98.0" text="Statut" />
+
+                <!-- Ajout des colonnes pour les boutons Modifier et Supprimer -->
+                <TableColumn fx:id="modifyColumn" prefWidth="107.0" text="Modifier" />
+                <TableColumn fx:id="deleteColumn" prefWidth="117.0" text="Supprimer" />
+            </columns>
+        </TableView>
+           <Button onAction="#handleGoToStatistics" prefWidth="152.0" text="Go to Statistics">
+                  <VBox.margin>
+                     <Insets left="400.0" />
+                  </VBox.margin>
+               </Button>
+           <Button mnemonicParsing="false" onAction="#openAfficherTransactionsWindow" prefHeight="25.0" prefWidth="152.0" text="Afficher les Transactions">
+                  <VBox.margin>
+                     <Insets left="400.0" />
+                  </VBox.margin>
+           </Button>
+               <Button mnemonicParsing="false" onAction="#openAjouterTransactionWindow" prefHeight="25.0" prefWidth="152.0" text="Ajouter une carte">
+                  <VBox.margin>
+                     <Insets left="400.0" />
+                  </VBox.margin>
+               </Button>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+
+        </padding>
+    </VBox>
+
+    </ScrollPane>
+
+        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="749.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/icons8_Search_52px.png" />
+        </ImageView>
+    </Pane>
+    </StackPane>
+</AnchorPane>

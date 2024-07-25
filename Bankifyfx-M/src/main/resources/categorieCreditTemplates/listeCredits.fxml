@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.categorieCreditController.ListeCredits">
+    <children>
+        <TableView fx:id="creditsTable" layoutX="93.0" layoutY="40.0" prefHeight="319.0" prefWidth="513.0" style="-fx-background-color: #1a1a2e; -fx-text-background-color: #1a1a2e; -fx-control-inner-background: #1a1a2e; -fx-table-cell-border-color: #2a2a3e;">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="39.0" style="-fx-text-fill: white; -fx-alignment: CENTER;" text="ID" />
+                <TableColumn fx:id="montantTotaleColumn" prefWidth="120.79998779296875" style="-fx-text-fill: white; -fx-alignment: CENTER;" text="Montant Totale" />
+                <TableColumn fx:id="dureeTotaleColumn" prefWidth="121.5999755859375" style="-fx-text-fill: white; -fx-alignment: CENTER;" text="Duree Totale" />
+                <TableColumn fx:id="interetColumn" prefWidth="112.79998779296875" style="-fx-text-fill: white; -fx-alignment: CENTER;" text="Interet" />
+                <TableColumn fx:id="dateCColumn" prefWidth="119.99990844726562" style="-fx-text-fill: white; -fx-alignment: CENTER;" text="Date" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

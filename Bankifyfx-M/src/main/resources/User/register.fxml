@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="signupBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" style="-fx-background-color: #242422;" stylesheets="/User/css/LoginStyles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.User.RegisterController">
+    <left>
+        <AnchorPane fx:id="switchToLoginContainer" prefHeight="640.0" prefWidth="400.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="206.0" prefHeight="52.0" prefWidth="350.0" text="Welcome back!" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="Montserrat ExtraBold" size="36.0" />
+                </font>
+            </Label>
+            <Text fill="#cedecf" layoutX="61.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To keep connected with us, please login with your personal info" textAlignment="CENTER" wrappingWidth="278.0195655822754">
+                <font>
+                    <Font name="Montserrat Regular" size="16.0" />
+                </font>
+            </Text>
+            <Button fx:id="switchToLogin" layoutX="124.0" layoutY="390.0" mnemonicParsing="false" onAction="#navigateToLogin" prefHeight="43.0" prefWidth="152.0" style="-fx-border-color: #cedecf; -fx-background-color: #242422;" styleClass="long-buttons" text="LOG IN" textAlignment="CENTER" textFill="#cedecf" />
+
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane fx:id="signupContainer" prefHeight="640.0" prefWidth="560.0" style="-fx-background-color: #87CEEB; -fx-background-radius: 0 0 0 0;" translateZ="1.0" BorderPane.alignment="CENTER">
+            <Pane fx:id="signupContent" layoutX="29.0" layoutY="43.0" prefHeight="554.0" prefWidth="502.0">
+                <Label alignment="CENTER" prefHeight="52.0" prefWidth="502.0" text="Create account" textAlignment="CENTER" textFill="#242422">
+                    <font>
+                        <Font name="Montserrat Bold" size="42.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnRegister" layoutX="169.0" layoutY="421.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="141.0" styleClass="AjouterUtilisateur" text="Register" textFill="#2b2929">
+                    <font>
+                        <Font name="Arial Black" size="17.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="txtEmail" layoutX="21.0" layoutY="183.0" prefHeight="56.0" prefWidth="222.0" promptText="Email" styleClass="form-text-field" />
+                <PasswordField fx:id="txtPassword" layoutX="251.0" layoutY="183.0" prefHeight="56.0" prefWidth="227.0" promptText="Password" styleClass="form-text-field" />
+                <TextField fx:id="txtNom" layoutX="22.0" layoutY="260.0" prefHeight="56.0" prefWidth="220.0" promptText="Nom" styleClass="form-text-field" />
+                <TextField fx:id="txtPrenom" layoutX="253.0" layoutY="260.0" prefHeight="56.0" prefWidth="225.0" promptText="Prenom" styleClass="form-text-field" />
+                <ChoiceBox fx:id="choiceGenre" layoutX="22.0" layoutY="331.0" prefHeight="56.0" prefWidth="219.0" styleClass="form-text-field" />
+
+                <DatePicker fx:id="dateNaissancePicker" layoutX="251.0" layoutY="331.0" prefHeight="56.0" prefWidth="227.0" promptText="Date De Naissance" styleClass="form-text-field" />
+
+                <Label alignment="CENTER" layoutX="77.0" layoutY="147.0" prefHeight="22.0" prefWidth="354.0" text="or use your email to register" textFill="#383836">
+                    <font>
+                        <Font name="Montserrat Regular" size="14.0" />
+                    </font>
+                </Label>
+
+                <Button graphicTextGap="0.0" layoutX="146.0" layoutY="69.0" mnemonicParsing="false" styleClass="account-chips">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@images/icon-fb.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button graphicTextGap="0.0" layoutX="223.0" layoutY="69.0" mnemonicParsing="false" styleClass="account-chips">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@images/icon-google.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button graphicTextGap="0.0" layoutX="301.0" layoutY="69.0" mnemonicParsing="false" styleClass="account-chips">
+                    <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@images/icon-ms.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </Pane>
+        </AnchorPane>
+    </right>
+</BorderPane>

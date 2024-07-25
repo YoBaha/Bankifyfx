@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="415.0" prefWidth="487.0" style="-fx-background-color: #cf87c4;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Compte.modiCompte">
+
+    <children>
+        <VBox alignment="CENTER" layoutX="50" layoutY="30" prefWidth="300" spacing="15">
+            <children>
+
+                <!-- Titre "Modifier Compte" en blanc -->
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="Modifier Compte" />
+
+                <!-- Label indiquant l'ID du compte client à modifier -->
+                <Label fx:id="compteClientLabel" />
+
+                <!-- Champs de texte pour la modification des détails du compte client -->
+                <HBox spacing="10">
+                    <Label text="Nom:" />
+                    <TextField fx:id="nomField">
+                        <HBox.margin>
+                            <Insets left="90.0" />
+                        </HBox.margin>
+                    </TextField>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Prénom:" />
+                    <TextField fx:id="prenomField">
+                        <HBox.margin>
+                            <Insets left="63.0" />
+                        </HBox.margin>
+                    </TextField>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="RIB:" />
+                    <TextField fx:id="ribField">
+                        <HBox.margin>
+                            <Insets left="84.0" />
+                        </HBox.margin>
+                    </TextField>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Mail:" />
+                    <TextField fx:id="mailField">
+                        <HBox.margin>
+                            <Insets left="77.0" />
+                        </HBox.margin>
+                    </TextField>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Tel:" />
+                    <TextField fx:id="telField">
+                        <HBox.margin>
+                            <Insets left="91.0" />
+                        </HBox.margin>
+                    </TextField>
+                </HBox>
+
+                <HBox spacing="10">
+                    <Label text="Solde:" />
+                    <TextField fx:id="soldeField">
+                        <HBox.margin>
+                            <Insets left="79.0" />
+                        </HBox.margin>
+                    </TextField>
+                </HBox>
+
+                <!-- Ajout du ComboBox pour le sexe -->
+                <HBox spacing="10">
+                    <Label text="Sexe:" />
+                    <ComboBox fx:id="sexeComboBox">
+                        <HBox.margin>
+                            <Insets left="79.0" />
+                        </HBox.margin>
+                    </ComboBox>
+                </HBox>
+            </children>
+        </VBox>
+
+        <!-- Bouton de modification -->
+        <Button fx:id="modifierButton" layoutX="188.0" layoutY="388.0" onAction="#modifierCompteClient" style="-fx-background-color: #fbe6de;" text="Confirmer les modifications" />
+    </children>
+</AnchorPane>

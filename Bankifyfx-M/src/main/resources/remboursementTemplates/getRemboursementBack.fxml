@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.remboursementController.GetRemboursementBack">
+    <children>
+        <TableView fx:id="remboursementsTable" layoutX="29.0" layoutY="21.0" prefHeight="358.0" prefWidth="642.0" style="-fx-background-color: #1a1a2e; -fx-text-background-color: #1a1a2e; -fx-control-inner-background: #1a1a2e; -fx-table-cell-border-color: #2a2a3e;">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="39.0" text="ID" style="-fx-text-fill: white; -fx-alignment: CENTER;"/>
+                <TableColumn fx:id="montantRColumn" prefWidth="170.40005493164062" text="Montant" style="-fx-text-fill: white; -fx-alignment: CENTER;"/>
+                <TableColumn fx:id="montantRestantColumn" prefWidth="170.40005493164062" text="Montant restant" style="-fx-text-fill: white; -fx-alignment: CENTER;"/>
+                <TableColumn fx:id="dateRColumn" prefWidth="126.39996337890625" text="Date" style="-fx-text-fill: white; -fx-alignment: CENTER;"/>
+                <TableColumn fx:id="dureeRestanteColumn" prefWidth="127.19998168945312" text="Duree restante" style="-fx-text-fill: white; -fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

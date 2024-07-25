@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="723.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.User.ProfileController">
+
+    <children>
+        <!-- Background image -->
+        <ImageView fx:id="tf_image" fitHeight="732.0" fitWidth="1084.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/background_front.jpg" />
+            </image>
+        </ImageView>
+
+        <!-- MenuBar with transparent background and purple text -->
+        <MenuBar layoutX="0.0" layoutY="0.0" prefHeight="30.0" prefWidth="1083.0" style="-fx-background-color: transparent;">
+            <menus>
+                <!-- Menu: Compte -->
+                <Menu style="-fx-text-fill: purple;" text="Compte">
+                    <items>
+                        <MenuItem onAction="#handleClicksFF1"  style="-fx-text-fill: purple;" text="Ouvrir Compte" />
+                        <MenuItem onAction="#handleClicksFF"  style="-fx-text-fill: purple;" text="Ouvrir Virement" />
+
+
+                    </items>
+                </Menu>
+                <!-- Menu: Transaction -->
+                <Menu style="-fx-text-fill: purple;" text="Transaction">
+                    <items>
+                        <MenuItem  onAction="#openAjouterTransactionWindow" style="-fx-text-fill: purple;" text="Ajouter Transaction" />
+                        <MenuItem  onAction="#openAfficherTransactionsWindow" style="-fx-text-fill: purple;" text="Afficher Transactions" />
+                    </items>
+                </Menu>
+
+                <!-- Menu: Crédit -->
+                <Menu style="-fx-text-fill: purple;" text="Crédit">
+                    <items>
+                        <MenuItem onAction="#demanderCredit" style="-fx-text-fill: purple;" text="Demander Crédit" />
+                        <MenuItem onAction="#consulterCredit" style="-fx-text-fill: purple;" text="Rembourser Crédit" />
+                    </items>
+                </Menu>
+
+                <!-- Menu: Chèque -->
+
+                <!-- Menu: Assurances -->
+                <Menu style="-fx-text-fill: purple;" text="Assurances">
+                    <items>
+                        <MenuItem onAction="#goToFrontAssuranceeButtonClicked"  style="-fx-text-fill: purple;" text="ConsulterAssurance" />
+
+                    </items>
+                </Menu>
+                <Menu text="Profile">
+                    <items>
+                        <MenuItem text="Edit Profile"  />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Pane fx:id="pnItems" layoutX="24.0" layoutY="38.0" prefHeight="682.0" prefWidth="1054.0">
+            <!-- Input fields for user profile information -->
+            <Label layoutX="41.0" layoutY="48.0" text="Nom" />
+            <Label layoutX="41.0" layoutY="90.0" text="Prénom" />
+            <Label layoutX="41.0" layoutY="132.0" text="Email" />
+            <Label layoutX="41.0" layoutY="174.0" text="Genre" />
+            <Label layoutX="41.0" layoutY="216.0" text="Date de Naissance" />
+            <Label layoutX="41.0" layoutY="256.0" text="Profile Picture" />
+            <TextField fx:id="picture_input" layoutX="160.0" layoutY="252.0" prefHeight="25.0" prefWidth="200.0" />
+
+
+            <TextField fx:id="txtNom" layoutX="160.0" layoutY="44.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="txtPrenom" layoutX="160.0" layoutY="86.0" prefHeight="25.0" prefWidth="200.0" />
+            <TextField fx:id="txtEmail" layoutX="160.0" layoutY="128.0" prefHeight="25.0" prefWidth="200.0" />
+            <ChoiceBox fx:id="choiceGenre" layoutX="160.0" layoutY="170.0" prefHeight="25.0" prefWidth="200.0" />
+            <DatePicker fx:id="txtDateNaissance" layoutX="160.0" layoutY="212.0" prefHeight="25.0" prefWidth="200.0" />
+            <Button fx:id="btnModifier" layoutX="160.0" layoutY="551.0" minHeight="30.0" minWidth="100.0" onAction="#modifier" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: green; -fx-text-fill: white;" text="Modifier" />
+            <Button layoutX="210.0" layoutY="285.0" mnemonicParsing="false" onAction="#upload" prefHeight="0.0" prefWidth="84.0" style="-fx-background-color: white; -fx-border-color: black;" text="Upload" />
+            <ImageView fx:id="image_view" fitHeight="200.0" fitWidth="200.0" layoutX="160.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 5; -fx-padding: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" />
+            <!-- Add more input fields for other profile information as needed -->
+        </Pane>
+        <Button fx:id="signoutBtn" layoutX="977.0" layoutY="661.0" mnemonicParsing="false" onAction="#signout" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: red;" styleClass="modern-button" text="Sign Out" textFill="WHITE" />
+
+    </children>
+</AnchorPane>

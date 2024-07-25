@@ -1,0 +1,118 @@
+/* Label */
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Text Field */
+.text-field {
+    -fx-font-size: 14px;
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+/* Button */
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+}
+
+/* Validation Label */
+.validation-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: red;
+}
+
+/* Anchor Pane */
+.anchor-pane {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 20px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+/* Table View */
+/* Table View */
+.table-view {
+    -fx-background-color: #ffffff; /* Background color */
+}
+
+/* Table Row */
+.table-row-cell {
+    -fx-background-color: #f2f2f2; /* Default row background color */
+    -fx-text-fill: #000000; /* Default text color */
+}
+
+/* Table Column Header */
+.table-view .column-header-background {
+    -fx-background-color: #4CAF50; /* Header background color */
+    -fx-text-fill: white; /* Header text color */
+    -fx-font-weight: bold; /* Header font weight */
+}
+
+
+
+/* Table Cell */
+
+/* Table Cell */
+
+
+/* Hover Effect */
+.table-row-cell:hover .table-cell {
+    -fx-background-color: #e5e5e5; /* Light gray background color on hover */
+}
+
+/* Selected Cell */
+.table-cell:selected {
+    -fx-background-color: #4CAF50; /* Green background color for selected cell */
+    -fx-text-fill: white; /* White text color for selected cell */
+}
+
+
+
+/* Table Header Cell */
+
+
+/* Table Cell */
+
+
+
+/* TabPane */
+.tab-pane {
+    -fx-background-color: #ffffff;
+}
+
+/* Tab Header Area */
+.tab-header-area {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+/* Tab Header Background */
+
+
+/* Tab */
+.tab {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected {
+    -fx-background-radius: 5px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+
+/* Content Area */
+.tab-content-area {
+    -fx-background-color: #ffffff;
+}
+

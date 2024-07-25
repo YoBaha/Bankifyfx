@@ -1,0 +1,8 @@
+.activate-button {
+    -fx-background-color: green;
+}
+
+/* Red background for the deactivate button */
+.deactivate-button {
+    -fx-background-color: red;
+}

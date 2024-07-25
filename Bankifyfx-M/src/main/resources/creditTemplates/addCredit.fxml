@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-image: url('background_front.jpg'); -fx-background-size: 100% 100%;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.creditController.AddCredit">
+    <children>
+        <MenuBar layoutX="0.0" layoutY="0.0" prefHeight="30.0" prefWidth="1091.0" style="-fx-background-color: transparent;">
+            <menus>
+                <!-- Compte Menu -->
+                <Menu style="-fx-text-fill: purple;" text="Compte">
+                    <items>
+                        <MenuItem onAction="#handleClicksFF1"  style="-fx-text-fill: purple;" text="Ouvrir Compte" />
+                        <MenuItem onAction="#handleClicksFF"  style="-fx-text-fill: purple;" text="Ouvrir Virement" />
+
+
+                    </items>
+                </Menu>
+
+                <!-- Transaction Menu -->
+                <Menu style="-fx-text-fill: purple;" text="Transaction">
+                    <items>
+                        <MenuItem onAction="#openAjouterTransactionWindow" style="-fx-text-fill: purple;" text="Ajouter Transaction" />
+                        <MenuItem onAction="#openAfficherTransactionsWindow" style="-fx-text-fill: purple;" text="Afficher Transactions" />
+                    </items>
+                </Menu>
+
+                <!-- Crédit Menu -->
+                <Menu style="-fx-text-fill: purple;" text="Crédit">
+                    <items>
+                        <MenuItem onAction="#demanderCredit" style="-fx-text-fill: purple;" text="Demander Crédit" />
+                        <MenuItem onAction="#consulterCredit" style="-fx-text-fill: purple;" text="Consulter Crédit" />
+                    </items>
+                </Menu>
+
+                <!-- Chèque Menu -->
+
+
+                <!-- Assurances Menu -->
+                <Menu style="-fx-text-fill: purple;" text="Assurances">
+                    <items>
+                        <MenuItem onAction="#goToFrontAssuranceeButtonClicked"  style="-fx-text-fill: purple;" text="ConsulterAssurance" />
+
+                    </items>
+                </Menu>
+                <Menu text="Profile">
+                    <items>
+                        <MenuItem text="Edit Profile" onAction="#goToProfileButtonClicked" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Button layoutX="170.0" layoutY="351.0" mnemonicParsing="false" onAction="#addCredit" style="-fx-background-color: #800080; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajouter" />
+        <Label layoutX="117.0" layoutY="142.0" text="Montant">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+        <TextField fx:id="montantTF" layoutX="200.0" layoutY="138.0" />
+        <Label layoutX="94.0" layoutY="192.0" text="Interét et durée :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <VBox layoutX="200.0" layoutY="192.0" prefHeight="65.0" prefWidth="116.0">
+         <children>
+                  <RadioButton fx:id="option1RadioButton" selected="true" text="10% sur 36 mois">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroup" />
+               </toggleGroup></RadioButton>
+                  <RadioButton fx:id="option2RadioButton" text="15% sur 48 mois" toggleGroup="$toggleGroup">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </RadioButton>
+                  <RadioButton fx:id="option3RadioButton" text="20% sur 60 mois" toggleGroup="$toggleGroup">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </RadioButton>
+         </children>
+      </VBox>
+        <Label layoutX="107.0" layoutY="280.0" text="Categorie :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ComboBox fx:id="categorieComboBox" layoutX="199.0" layoutY="276.0" prefWidth="150.0">
+      </ComboBox>
+        <Button fx:id="signoutBtn" layoutX="977.0" layoutY="661.0" mnemonicParsing="false" onAction="#signout" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: red;" styleClass="modern-button" text="Sign Out" />
+
+    </children>
+</AnchorPane>

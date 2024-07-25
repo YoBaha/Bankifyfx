@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="396.0" prefWidth="958.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Compte.AjoutVirement">
+    <children>
+        <ImageView fitHeight="397.0" fitWidth="1082.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img.png" />
+            </image>
+        </ImageView>
+
+        <!-- Ajout du titre "Ajouter un virement" en blanc -->
+        <Label layoutX="350.0" layoutY="20.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="Ajouter un virement" />
+        <!-- Fin de l'ajout du titre -->
+
+        <Label layoutX="74.0" layoutY="91.0" text="Compte Source:" textFill="#ffffff" />
+        <Label layoutX="62.0" layoutY="134.0" text="Compte Destination:" textFill="#ffffff" />
+        <Label layoutX="92.0" layoutY="190.0" text="Montant:" textFill="#ffffff" />
+        <Label layoutX="63.0" layoutY="239.0" text="Date (yyyy-mm-dd):" textFill="#ffffff" />
+        <Label layoutX="68.0" layoutY="297.0" text="Heure (hh:mm:ss):" textFill="#ffffff" />
+        <TextField fx:id="compteSourceTextField" layoutX="200.0" layoutY="87.0" />
+        <TextField fx:id="compteDestinationTextField" layoutX="200.0" layoutY="130.0" />
+        <TextField fx:id="montantTextField" layoutX="200.0" layoutY="177.0" />
+        <TextField fx:id="dateTextField" layoutX="200.0" layoutY="235.0" />
+        <TextField fx:id="heureTextField" layoutX="200.0" layoutY="293.0" />
+        <Button layoutX="372.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleConfirmButton" text="Confirm" />
+    </children>
+</AnchorPane>

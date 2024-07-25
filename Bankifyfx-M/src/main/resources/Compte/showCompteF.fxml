@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="723.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Compte.getCompteClientF">
+    <children>
+        <ImageView fitHeight="740.0" fitWidth="1092.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@front.jpeg" />
+            </image>
+        </ImageView>
+        <!-- Ajout du titre en blanc et en gras -->
+        <MenuBar layoutX="0.0" layoutY="0.0" prefHeight="30.0" prefWidth="1016.0" style="-fx-background-color: transparent;">
+            <menus>
+                <!-- Menu: Compte -->
+                <Menu style="-fx-text-fill: purple;" text="Compte">
+                    <items>
+                        <MenuItem onAction="#handleClicksFF1" style="-fx-text-fill: purple;" text="Ouvrir Compte" />
+                        <MenuItem onAction="#handleClicksFF" style="-fx-text-fill: purple;" text="Ouvrir Virement" />
+
+
+                    </items>
+                </Menu>
+                <!-- Menu: Transaction -->
+                <Menu style="-fx-text-fill: purple;" text="Transaction">
+                    <items>
+                        <MenuItem onAction="#openAjouterTransactionWindow" style="-fx-text-fill: purple;" text="Ajouter Transaction" />
+                        <MenuItem onAction="#openAfficherTransactionsWindow" style="-fx-text-fill: purple;" text="Afficher Transactions" />
+                    </items>
+                </Menu>
+
+                <!-- Menu: Crédit -->
+                <Menu style="-fx-text-fill: purple;" text="Crédit">
+                    <items>
+                        <MenuItem onAction="#demanderCredit" style="-fx-text-fill: purple;" text="Demander Crédit" />
+                        <MenuItem onAction="#consulterCredit" style="-fx-text-fill: purple;" text="Rembourser Crédit" />
+                    </items>
+                </Menu>
+
+                <!-- Menu: Chèque -->
+
+
+                <!-- Menu: Assurances -->
+                <Menu style="-fx-text-fill: purple;" text="Assurances">
+                    <items>
+                        <MenuItem onAction="#goToFrontAssuranceeButtonClicked" style="-fx-text-fill: purple;" text="ConsulterAssurance" />
+
+                    </items>
+
+                </Menu>
+                <Menu text="Profile">
+                    <items>
+                        <MenuItem text="Edit Profile" onAction="#goToProfileButtonClicked" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <VBox fx:id="panel_scroll" layoutX="7.0" layoutY="41.0" prefHeight="620.0" prefWidth="1080.0">
+         <children>
+              <Button mnemonicParsing="false" onAction="#NewCompte" prefHeight="25.0" prefWidth="126.0" text="Ajouter un Compte" />
+              <!-- Fin de l'ajout du titre -->
+              <TableView fx:id="compteClientTable" prefHeight="517.0" prefWidth="1080.0" style="-fx-background-color: #fbe6de;">
+                  <columns>
+                      <TableColumn fx:id="nomColumn" prefWidth="87.0" text="Nom" />
+                      <TableColumn fx:id="prenomColumn" prefWidth="132.0" text="Prénom" />
+                      <TableColumn fx:id="ribColumn" prefWidth="93.0" text="RIB" />
+                      <TableColumn fx:id="mailColumn" prefWidth="104.0" text="Mail" />
+                      <TableColumn fx:id="telColumn" prefWidth="98.0" text="Tel" />
+                      <TableColumn fx:id="soldeColumn" prefWidth="108.0" text="Solde" />
+                      <!-- Add a new TableColumn for sexe -->
+                      <TableColumn fx:id="sexeColumn" prefWidth="100.0" text="Sexe" />
+                      <!-- Add columns for "Modifier" and "Supprimer" buttons -->
+                      <TableColumn fx:id="modifyColumn" prefWidth="108.0" text="Modifier" />
+                      <TableColumn fx:id="deleteColumn" prefWidth="98.0" text="Supprimer" />
+                  <TableColumn fx:id="ChequeColumn" prefWidth="98.0" text="Cheques" />
+                  </columns>
+              </TableView>
+         </children>
+      </VBox>
+
+        <Button fx:id="signoutBtn" layoutX="977.0" layoutY="661.0" mnemonicParsing="false" onAction="#signout" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: red;" styleClass="modern-button" text="Sign Out" />
+
+    </children>
+
+
+</AnchorPane>

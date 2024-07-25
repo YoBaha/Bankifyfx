@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Compte.getVirement">
+    <children>
+        <ImageView fitHeight="572.0" fitWidth="966.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img.png" />
+            </image>
+        </ImageView>
+        <!-- Ajout du titre en blanc et en gras -->
+        <Label layoutX="411.0" layoutY="14.0" style="-fx-font-size: 20px; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Liste des virements" />
+        <!-- Fin de l'ajout du titre -->
+        <TableView fx:id="virementTable" layoutX="204.0" layoutY="65.0" prefHeight="321.0" prefWidth="556.0" style="-fx-background-color: #fbe6de;">
+            <columns>
+                <TableColumn fx:id="compteSourceColumn" prefWidth="87.0" text="Compte Source" />
+                <TableColumn fx:id="compteDestinationColumn" prefWidth="132.0" text="Compte Destination" />
+                <TableColumn fx:id="montantColumn" prefWidth="93.0" text="Montant" />
+                <TableColumn fx:id="dateColumn" prefWidth="104.0" text="Date" />
+                <TableColumn fx:id="heureColumn" prefWidth="98.0" text="Heure" />
+            </columns>
+        </TableView>
+        <Button layoutX="656.0" layoutY="16.0" mnemonicParsing="false" onAction="#NewVirement" text="Ajouter un Virement" />
+        <Button layoutX="103.0" layoutY="16.0" mnemonicParsing="false" onAction="#Excell" text="Generate Excell" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+.modern-button {
+    -fx-background-color: linear-gradient(to bottom, #4CAF50, #45a049);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.modern-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #45a049, #4CAF50);
+}
